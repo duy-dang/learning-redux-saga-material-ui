@@ -16,7 +16,7 @@ class Taskitem extends Component {
     var { title, description, status } = value;
     return (
       <Card>
-        <CardContent>  
+        <CardContent>
           <Grid container justify="space-between">
             <Grid item md={8}>
               <Typography component="h2">{title}</Typography>
