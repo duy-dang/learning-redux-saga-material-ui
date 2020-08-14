@@ -12,7 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 class Taskitem extends Component {
   render() {
-    var { value, statuse, classes } = this.props;
+    var { value, statuse, classes, onEdit, onDelete } = this.props;
     var { title, description, status } = value;
     return (
       <Card>
@@ -28,10 +28,20 @@ class Taskitem extends Component {
           <p>{description}</p>
         </CardContent>
         <CardActions className={classes.cardActions}>
-          <IconButton size="small" color="primary" aria-label="edit">
+          <IconButton
+            size="small"
+            color="primary"
+            aria-label="edit"
+            onClick={onEdit}
+          >
             <EditIcon />
           </IconButton>
-          <IconButton size="small" color="primary" aria-label="delete">
+          <IconButton
+            size="small"
+            color="primary"
+            aria-label="delete"
+            onClick={onDelete}
+          >
             <DeleteIcon />
           </IconButton>
         </CardActions>
